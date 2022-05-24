@@ -1,6 +1,6 @@
 {
     "name": "maniac/easemob-php",
-    "description": "easemob server sdk for php",
+    "description": "PHP Server SDK for IM.",
     "license": "MIT",
     "authors": [
       {
