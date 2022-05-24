@@ -30,12 +30,14 @@ composer require maniac/easemob-php
 如果你没有环信管理后台账号，请先注册账号，点击 [这里](https://console.easemob.com/user/register)，注册成功后请登录，然后点击“添加应用”，添加成功后点击“查看”即可获取到 appkey、Client ID、ClientSecret。
 
 ### 使用
+如果使用 Laravel、YII、ThinkPHP 之类的框架，composer 安装的库会自动加载，如果没有使用框架，需要手动引入 `vendor/autoload.php` 文件。
+
 使用所有的类之前，都要先初始化授权对象，然后再初始化其他类时，传入授权对象
 ```php
-require 'path_to_sdk/vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use \Easemob\Auth;
-use \Easemob\User;
+use Easemob\Auth;
+use Easemob\User;
 
 $auth = new Auth("appKey", "Client ID", "ClientSecret");
 $user = new User($auth);
@@ -59,10 +61,10 @@ $user = new User($auth);
 举个例子，我们要注册一个用户，就可以这样写：
 
 ```php
-require 'path_to_sdk/vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use \Easemob\Auth;
-use \Easemob\User;
+use Easemob\Auth;
+use Easemob\User;
 
 $auth = new Auth("appKey", "Client ID", "ClientSecret");
 $user = new User($auth);
@@ -121,9 +123,9 @@ PHP SDK 会直接返回 REST API 的错误码及错误描述，具体请参考 [
 在初始化授权对象 Auth 之后，可以设置代理：
 
 ```php
-require 'path_to_sdk/vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use \Easemob\Auth;
+use Easemob\Auth;
 use Easemob\Http\Http
 
 $easemob = $config['easemob'];
