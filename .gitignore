@@ -1,0 +1,6 @@
+.DS_Store
+.phpdoc
+.phpunit.result.cache
+/vendor/
+/docs/
+/doxygen/
