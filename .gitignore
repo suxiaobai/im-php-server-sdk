@@ -4,3 +4,4 @@
 /vendor/
 /docs/
 /doxygen/
+deploy.sh
